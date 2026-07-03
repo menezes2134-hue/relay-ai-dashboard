@@ -293,7 +293,7 @@ debug_mode = st.sidebar.checkbox("Show data audit", value=False)
 def render_kpi_header(title, vsm, thrive, what, decision, vanity):
     col_back, col_title = st.columns([1.5, 8.5])
     with col_back:
-        st.button("⬅️ Voltar para a Capa", on_click=mudar_aba, args=("🏠 Overview",), key=f"back_{title}")
+        st.button("⬅️ Back to Overview", on_click=mudar_aba, args=("🏠 Overview",), key=f"back_{title}")
     with col_title:
         st.markdown(f"<h1 style='margin-top: -15px;'>{title}</h1>", unsafe_allow_html=True)
 
