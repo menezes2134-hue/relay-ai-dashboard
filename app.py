@@ -113,9 +113,9 @@ def fig_layout(fig, height=430):
         plot_bgcolor=COLOR_BG,
         paper_bgcolor=COLOR_BG,
         font=dict(color=COLOR_NEUTRAL, size=15),
-        title=dict(font=dict(size=18, color=COLOR_NEUTRAL), x=0.0),
+        title=dict(font=dict(size=20, color=COLOR_NEUTRAL), x=0.0, y=0.97, xanchor="left", yanchor="top"),
         height=height,
-        margin=dict(l=45, r=75, t=75, b=65),
+        margin=dict(l=70, r=105, t=105, b=80),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -132,8 +132,9 @@ def fig_layout(fig, height=430):
         linecolor="rgba(52,70,34,0.45)",
         linewidth=1,
         zeroline=False,
-        tickfont=dict(size=13),
-        title_font=dict(size=15),
+        tickfont=dict(size=14),
+        title_font=dict(size=16),
+        automargin=True,
     )
     fig.update_yaxes(
         showgrid=False,
@@ -141,8 +142,9 @@ def fig_layout(fig, height=430):
         linecolor="rgba(52,70,34,0.45)",
         linewidth=1,
         zeroline=False,
-        tickfont=dict(size=13),
-        title_font=dict(size=15),
+        tickfont=dict(size=14),
+        title_font=dict(size=16),
+        automargin=True,
     )
     return fig
 
@@ -610,8 +612,8 @@ elif aba == "📊 KPI 1: LTV:CAC":
                 mode="gauge+number",
                 value=val_paid,
                 number={"suffix": "x", "valueformat": ".2f"},
-                title={"text": "Paid Social LTV:CAC Ratio"},
-                domain={"x": [0, 1], "y": [0, 1]},
+                title={"text": ""},
+                domain={"x": [0, 1], "y": [0, 0.86]},
                 gauge={
                     "axis": {"range": [0, max(8, max(ratios) * 1.15)]},
                     "bar": {"color": COLOR_WARN if val_paid < 3 else COLOR_SAFE},
@@ -626,9 +628,17 @@ elif aba == "📊 KPI 1: LTV:CAC":
             fig_gauge.update_layout(
                 plot_bgcolor=COLOR_BG,
                 paper_bgcolor=COLOR_BG,
-                font=dict(color=COLOR_NEUTRAL, size=15),
-                height=320,
-                margin=dict(t=45, b=10)
+                font=dict(color=COLOR_NEUTRAL, size=16),
+                title=dict(
+                    text="Paid Social LTV:CAC Ratio",
+                    x=0.5,
+                    y=0.98,
+                    xanchor="center",
+                    yanchor="top",
+                    font=dict(size=20, color=COLOR_NEUTRAL)
+                ),
+                height=380,
+                margin=dict(l=40, r=40, t=105, b=35)
             )
             st.plotly_chart(fig_gauge, use_container_width=True)
 
@@ -841,7 +851,7 @@ elif aba == "⚡ KPI 3: SKU Anomaly":
             fig = fig_layout(fig, height=620)
             fig.update_xaxes(showgrid=False)
             fig.update_yaxes(showgrid=False)
-            fig.update_layout(yaxis2=dict(title="Share of returned units (%)", overlaying="y", side="right", range=[0, max(40, max(shares) * 1.25)], ticksuffix="%", showgrid=False, showline=True, linecolor="rgba(52,70,34,0.45)", tickfont=dict(size=13), title_font=dict(size=15)))
+            fig.update_layout(yaxis2=dict(title="Share of returned units (%)", overlaying="y", side="right", range=[0, max(40, max(shares) * 1.25)], ticksuffix="%", showgrid=False, showline=True, linecolor="rgba(52,70,34,0.45)", tickfont=dict(size=14), title_font=dict(size=16)))
             st.plotly_chart(fig, use_container_width=True)
 
             source_size = df[["size_band", "share_of_units", "share_of_units_pct", "return_rate_pct"]].rename(columns={
