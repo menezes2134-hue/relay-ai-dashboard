@@ -1,0 +1,8 @@
+﻿size_band;share_of_units;return_rate_pct
+XS;0,06;21
+S;0,18;21,8
+M;0,32;22,4
+L;0,26;24,1
+XL;0,13;28,2
+XXL;0,05;31,5
+"Note: size recommendations are produced by the on-site fit widget; accuracy by band has not been audited.";;
