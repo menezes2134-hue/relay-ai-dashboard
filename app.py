@@ -743,7 +743,7 @@ elif aba == "🗣️ KPI 2: Retention & Trust":
 # ---------------------------------------------------------
 elif aba == "⚡ KPI 3: SKU Anomaly":
     render_kpi_header(
-        title="Unified SKU Anomaly Response Time",
+        title="Demand Signal & Inventory Resilience",
         vsm="VSM: System 2 (Coordinating)",
         thrive="THRIVE: Sustains (E-Test)",
         what="Inventory shortages and dimensional sizing return variances that signal operational breakdowns.",
