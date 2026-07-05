@@ -285,7 +285,7 @@ st.sidebar.markdown("---")
 
 aba = st.sidebar.radio(
     "Navigation",
-    ["🏠 Overview", "📊 KPI 1: LTV:CAC", "🗣️ KPI 2: Retention & Trust", "⚡ KPI 3: SKU Anomaly"],
+    ["🏠 Overview", "📊 KPI 1: LTV:CAC", "🗣️ KPI 2: Retention & Trust", "⚡ KPI 3: Demand & Inventory"],
     key="aba_atual"
 )
 
@@ -741,7 +741,7 @@ elif aba == "🗣️ KPI 2: Retention & Trust":
 # ---------------------------------------------------------
 # 8. KPI 3
 # ---------------------------------------------------------
-elif aba == "⚡ KPI 3: SKU Anomaly":
+elif aba == "⚡ KPI 3: Demand & Inventory":
     render_kpi_header(
         title="Demand Signal & Inventory Resilience",
         vsm="VSM: System 2 (Coordinating)",
