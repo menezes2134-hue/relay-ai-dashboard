@@ -526,7 +526,7 @@ if aba == "🏠 Overview":
     with c3:
         st.markdown(f"""
         <div style='background-color:#FDFCF0; border: 1px solid #E2D1C3; border-radius:10px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; margin-bottom: 5px; height: 100%;'>
-            <div><p style='color:#A46B52; font-style:italic; margin-bottom:5px; font-weight:bold;'>KPI iii.</p><h3 style='margin-top:0; margin-bottom: 20px;'>SKU Anomaly Response</h3></div>
+            <div><p style='color:#A46B52; font-style:italic; margin-bottom:5px; font-weight:bold;'>KPI iii.</p><h3 style='margin-top:0; margin-bottom: 20px;'>Demand Response</h3></div>
             <div>
                 <div style='display:flex; justify-content:space-between; align-items:end; margin-bottom: 10px;'><h1 style='color:#C55A44; margin:0; font-size:2.5rem; line-height: 1;'>{checkpoint_var}</h1><p style='margin:0; font-size:11px; color:#666; font-weight:bold;'>CHECKPOINT GAP</p></div>
                 <div style='display:flex; justify-content:space-between; align-items:end;'><h1 style='color:#D5A04C; margin:0; font-size:2.5rem; line-height: 1;'>{sizing_share}</h1><p style='margin:0; font-size:11px; color:#666; font-weight:bold;'>SIZING RETURN SHARE</p></div>
@@ -534,7 +534,7 @@ if aba == "🏠 Overview":
             <hr><div><span class='badge-vsm'>S2 · COORDINATING</span> <span class='badge-thrive'>THRIVE E</span></div>
         </div>
         """, unsafe_allow_html=True)
-        st.button("Open KPI 3 Detail ➔", on_click=mudar_aba, args=("⚡ KPI 3: SKU Anomaly",), key="btn_kpi3")
+        st.button("Open KPI 3 Detail ➔", on_click=mudar_aba, args=("⚡ KPI 3: Demand & Inventory",), key="btn_kpi3")
 
 
 # ---------------------------------------------------------
